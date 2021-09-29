@@ -2,6 +2,7 @@ var googleDocId = "{YOUR_FORM_ID}";
 var emailField = 'Email Address'; // This is the recipient's email
 var emailSubject = "Your Email's Subject";
 var emailStatus = 'Date sent';
+var offboardeeEmail = 'Email';
 
 var sheet = SpreadsheetApp.getActiveSheet();
 
