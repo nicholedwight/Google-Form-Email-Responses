@@ -33,6 +33,8 @@ function sendEmail() {
 
       sheet.getRange(2 + index, sentRow).setValue(new Date()); // Update the last column to show when sent
       SpreadsheetApp.flush(); // Make sure the last cell is updated right away
+
+      callAPIGateway(config['Email'])
     }
   });
 }
