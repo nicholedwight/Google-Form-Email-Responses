@@ -55,3 +55,15 @@ function getCols(startRow, numRows) {
   var dataRange = sheet.getRange(startRow, 1, numRows, lastColumn)
   return dataRange.getValues();
 }
+
+function callAPIGateway(email) {
+  var data = {
+    'email': email
+  };
+  var options = {
+    'method' : 'post',
+    'contentType': 'application/json',
+    'payload' : JSON.stringify(data)
+  };
+  UrlFetchApp.fetch('{API URL}', options);
+}
